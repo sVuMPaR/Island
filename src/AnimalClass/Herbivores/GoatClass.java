@@ -1,26 +1,33 @@
 package AnimalClass.Herbivores;
 
-import AnimalClass.Animal;
-import AnimalClass.Eatable;
+import AnimalClass.Herbivore;
 
-public class GoatClass extends Animal implements Eatable {
+/**
+ * Класс Коза - травоядное
+ * Характеристики согласно заданию:
+ * - Вес: 60 кг
+ * - Максимум на клетке: 140
+ * - Скорость: 3 клетки за ход
+ * - Пища для насыщения: 10 кг
+ */
+public class GoatClass extends Herbivore {
+    
+    public GoatClass() {
+        super(60, 140, 3, 10);
+    }
+    
     @Override
     public void eat() {
-
+        // Козы едят только растения (100% вероятность)
     }
-
+    
     @Override
     public void move() {
-
+        // Коза может перемещаться на 3 клетки за ход
     }
-
+    
     @Override
-    public void birth() {
-
-    }
-
-    @Override
-    public void canBeEaten() {
-
+    public void reproduce() {
+        // Логика размножения коз
     }
 }
