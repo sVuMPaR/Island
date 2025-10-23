@@ -7,7 +7,7 @@ public class SimulationParameters {
     
     // Размер острова
     public static final int ISLAND_WIDTH = 20;
-    public static final int ISLAND_HEIGHT = 10;
+    public static final int ISLAND_HEIGHT = 100;
     
     // Длительность симуляции
     public static final int SIMULATION_DURATION_SECONDS = 60;
@@ -31,7 +31,7 @@ public class SimulationParameters {
     public static final int INITIAL_KANGAROO_COUNT = 5;
     
     // Количество растений на старте
-    public static final int INITIAL_PLANT_COUNT_PER_CELL = 200;
+    public static final int INITIAL_PLANT_COUNT_PER_CELL = (int) (Math.random() * 100);
     
     // Вероятности действий (в процентах)
     public static final int MOVE_PROBABILITY = 100; // 100% вероятность попытки движения

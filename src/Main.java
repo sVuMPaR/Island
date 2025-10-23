@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== СИМУЛЯЦИЯ ЭКОСИСТЕМЫ ОСТРОВА ===");
         System.out.println("Проект JavaRush - Модуль 2");
-        System.out.println("Автор: AI Assistant");
         System.out.println();
         
         try {

@@ -1,5 +1,6 @@
 package AnimalClass.Predators;
 
+import AnimalClass.Animal;
 import AnimalClass.Predator;
 import AnimalClass.FeedingMatrix;
 import AnimalClass.Animal;
@@ -42,7 +43,7 @@ public class WolfClass extends Predator {
     public boolean canEatPlants() {
         return false; // Волки не едят растения
     }
-    
+
     @Override
     public int getEatingProbability(Animal prey) {
         return FeedingMatrix.getEatingProbability(

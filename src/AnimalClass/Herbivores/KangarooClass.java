@@ -11,21 +11,21 @@ import AnimalClass.Herbivore;
  * - Пища для насыщения: 15 кг
  */
 public class KangarooClass extends Herbivore {
-    
+
     public KangarooClass() {
         super(70, 2, 2, 15);
     }
-    
+
     @Override
     public void eat() {
         // Кенгуру едят только растения (100% вероятность)
     }
-    
+
     @Override
     public void move() {
         // Кенгуру может перемещаться на 2 клетки за ход
     }
-    
+
     @Override
     public void reproduce() {
         // Логика размножения кенгуру
