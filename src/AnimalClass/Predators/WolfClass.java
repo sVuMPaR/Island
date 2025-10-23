@@ -3,7 +3,6 @@ package AnimalClass.Predators;
 import AnimalClass.Animal;
 import AnimalClass.Predator;
 import AnimalClass.FeedingMatrix;
-import AnimalClass.Animal;
 import java.util.Random;
 
 /**

@@ -1,6 +1,5 @@
 import Island.IslandClass;
 import Island.SimulationParameters;
-
 /**
  * Главный класс для запуска симуляции острова
  * Согласно требованиям JavaRush
