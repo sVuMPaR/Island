@@ -1,7 +1,7 @@
 package Island;
 
 import AnimalClass.*;
-import AnimalClass.Herbivores.*;
+import AnimalClass.Herbivores.KangarooClass;
 import AnimalClass.Predators.*;
 import Plants.Plant;
 import java.util.*;
@@ -71,7 +71,7 @@ public class IslandClass {
         placeAnimals(BoarClass.class, SimulationParameters.INITIAL_BOAR_COUNT);
         placeAnimals(BuffaloClass.class, SimulationParameters.INITIAL_BUFFALO_COUNT);
         placeAnimals(DuckClass.class, SimulationParameters.INITIAL_DUCK_COUNT);
-        placeAnimals(CaterpillarClass.class, SimulationParameters.INITIAL_CATERPILLAR_COUNT);
+        placeAnimals(KangarooClass.class, SimulationParameters.INITIAL_KANGAROO_COUNT);
         
         updateStatistics();
     }

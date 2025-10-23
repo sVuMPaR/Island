@@ -28,7 +28,7 @@ public class SimulationParameters {
     public static final int INITIAL_BOAR_COUNT = 50;
     public static final int INITIAL_BUFFALO_COUNT = 10;
     public static final int INITIAL_DUCK_COUNT = 200;
-    public static final int INITIAL_CATERPILLAR_COUNT = 1000;
+    public static final int INITIAL_KANGAROO_COUNT = 5;
     
     // Количество растений на старте
     public static final int INITIAL_PLANT_COUNT_PER_CELL = 200;
@@ -55,7 +55,7 @@ public class SimulationParameters {
     public static final int BOAR_CUBS = 3;
     public static final int BUFFALO_CUBS = 1;
     public static final int DUCK_CUBS = 4;
-    public static final int CATERPILLAR_CUBS = 20;
+    public static final int KANGAROO_CUBS = 1;
     
     /**
      * Получить количество детенышей для конкретного класса животного
@@ -77,7 +77,7 @@ public class SimulationParameters {
         if (className.contains("boar")) return BOAR_CUBS;
         if (className.contains("buffalo")) return BUFFALO_CUBS;
         if (className.contains("duck")) return DUCK_CUBS;
-        if (className.contains("caterpillar")) return CATERPILLAR_CUBS;
+        if (className.contains("kangaroo")) return KANGAROO_CUBS;
         
         return 1; // По умолчанию
     }
