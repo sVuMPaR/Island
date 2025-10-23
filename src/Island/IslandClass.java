@@ -1,7 +1,7 @@
 package Island;
 
 import AnimalClass.*;
-import AnimalClass.Herbivores.KangarooClass;
+import AnimalClass.Herbivores.*;
 import AnimalClass.Predators.*;
 import Plants.Plant;
 import java.util.*;
@@ -190,6 +190,15 @@ public class IslandClass {
             // Питание
             if (random.nextInt(100) < SimulationParameters.MOVE_PROBABILITY) {
                 animal.eat();
+                // Животные могут есть растения в клетке
+                if (animal instanceof Herbivore && !plants.isEmpty()) {
+                    // Травоядные едят растения
+                    Plant plantToEat = plants.get(random.nextInt(plants.size()));
+                    if (plantToEat.isAlive()) {
+                        plantToEat.die();
+                        cell.removePlant(plantToEat);
+                    }
+                }
             }
             
             // Движение
@@ -203,9 +212,14 @@ public class IslandClass {
             }
         }
         
-        // Размножение растений
-        if (plants.size() < Plant.MAX_COUNT_PER_CELL && random.nextInt(100) < 50) {
-            cell.addPlant(new Plant());
+        // Размножение растений - случайно от 0 до 200 в клетке
+        if (random.nextInt(100) < SimulationParameters.PLANT_REPRODUCTION_PROBABILITY) {
+            int newPlantsCount = random.nextInt(201); // от 0 до 200 растений
+            for (int i = 0; i < newPlantsCount; i++) {
+                if (cell.getPlantCount() < Plant.MAX_COUNT_PER_CELL) {
+                    cell.addPlant(new Plant());
+                }
+            }
         }
     }
     
@@ -365,6 +379,15 @@ public class IslandClass {
             lock.lock();
             try {
                 plants.add(plant);
+            } finally {
+                lock.unlock();
+            }
+        }
+        
+        public void removePlant(Plant plant) {
+            lock.lock();
+            try {
+                plants.remove(plant);
             } finally {
                 lock.unlock();
             }

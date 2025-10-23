@@ -36,6 +36,7 @@ public class SimulationParameters {
     // Вероятности действий (в процентах)
     public static final int MOVE_PROBABILITY = 100; // 100% вероятность попытки движения
     public static final int REPRODUCTION_PROBABILITY = 50; // 50% вероятность размножения при наличии пары
+    public static final int PLANT_REPRODUCTION_PROBABILITY = 50; // 50% вероятность размножения растений
     
     // Условия остановки симуляции
     public static final boolean STOP_WHEN_ALL_ANIMALS_DIE = true;
