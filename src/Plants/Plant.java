@@ -5,10 +5,11 @@ package Plants;
  * Растения являются основой пищевой цепи на острове
  */
 public class Plant {
+    public static final int MAX_COUNT_PER_CELL = 200;
+    
     private int weight; // вес растения в кг
     private int maxCountPerCell; // максимальное количество растений на одной клетке
     private boolean isAlive; // живое ли растение
-    
     public Plant() {
         this.weight = 1; // 1 кг
         this.maxCountPerCell = 200; // максимум 200 растений на клетке

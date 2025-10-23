@@ -2,6 +2,7 @@ package AnimalClass.Predators;
 
 import AnimalClass.Predator;
 import AnimalClass.FeedingMatrix;
+import AnimalClass.Animal;
 
 /**
  * Класс Лиса - хищник

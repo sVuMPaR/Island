@@ -14,7 +14,14 @@ public abstract class Herbivore extends Animal {
      * Травоядные едят только растения
      */
     @Override
-    public abstract void eat();
+    public void eat() {
+        // Травоядные могут есть растения
+        // Базовая реализация - попытка найти и съесть растение
+        if (currentFoodWeight < maxFoodWeight) {
+            // Симуляция поедания растения
+            currentFoodWeight = Math.min(maxFoodWeight, currentFoodWeight + 10);
+        }
+    }
     
     /**
      * Травоядные не могут есть других животных

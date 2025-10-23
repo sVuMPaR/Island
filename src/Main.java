@@ -1,13 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import Island.IslandClass;
+import Island.SimulationParameters;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+/**
+ * Главный класс для запуска симуляции острова
+ * Согласно требованиям JavaRush
+ */
+public class Main {
+    
+    public static void main(String[] args) {
+        System.out.println("=== СИМУЛЯЦИЯ ЭКОСИСТЕМЫ ОСТРОВА ===");
+        System.out.println("Проект JavaRush - Модуль 2");
+        System.out.println("Автор: AI Assistant");
+        System.out.println();
+        
+        try {
+            // Создание острова
+            IslandClass island = new IslandClass(
+                SimulationParameters.ISLAND_WIDTH, 
+                SimulationParameters.ISLAND_HEIGHT
+            );
+            
+            // Запуск симуляции
+            island.startSimulation();
+            
+        } catch (Exception e) {
+            System.err.println("Ошибка при запуске симуляции: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        System.out.println("\nПрограмма завершена.");
     }
 }

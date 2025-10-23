@@ -14,7 +14,14 @@ public abstract class Predator extends Animal {
      * Хищники могут есть других животных
      */
     @Override
-    public abstract void eat();
+    public void eat() {
+        // Хищники могут есть других животных
+        // Базовая реализация - попытка найти и съесть жертву
+        if (currentFoodWeight < maxFoodWeight) {
+            // Симуляция поедания жертвы
+            currentFoodWeight = Math.min(maxFoodWeight, currentFoodWeight + 15);
+        }
+    }
     
     /**
      * Хищники могут есть растения (некоторые виды)
