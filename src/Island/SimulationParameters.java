@@ -11,7 +11,7 @@ public class SimulationParameters {
     
     // Длительность симуляции
     public static final int SIMULATION_DURATION_SECONDS = 60;
-    public static final int TICK_DURATION_MS = 1000; // 1 секунда на такт
+    public static final int TICK_DURATION_MS = 2000; // 1 секунда на такт
     
     // Количество животных каждого вида на старте
     public static final int INITIAL_WOLF_COUNT = 30;

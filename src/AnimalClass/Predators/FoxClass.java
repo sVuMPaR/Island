@@ -21,6 +21,7 @@ public class FoxClass extends Predator {
     @Override
     public void eat() {
         // Логика поедания: Кролик(70%), Мышь(90%), Утка(60%), Гусеница(40%), Растения(40%)
+
     }
     
     @Override
